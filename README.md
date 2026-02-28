@@ -4,12 +4,22 @@ Minimal sidechain packing script using [FAMPNN](https://www.biorxiv.org/content/
 
 # Installation
 
+**Linux (CUDA):**
 ```bash
-conda create -n fampnn python=3.10
+conda env create -f environment.yaml
 conda activate fampnn
 pip install torch  # see https://pytorch.org/get-started/locally/ for your CUDA version
 pip install -e .
 ```
+
+**Mac (Apple Silicon):**
+```bash
+conda env create -f Mac_environment.yaml
+conda activate fampnn
+pip install -e .
+```
+
+For a fully pinned environment with exact package versions, use `environment_full.yaml` instead.
 
 ## Model weights
 
